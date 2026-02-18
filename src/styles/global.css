@@ -1,0 +1,23 @@
+@import url("./tokens.css");
+@import url("./semantic.css");
+/*@import url("./base.css");*/
+@import "tailwindcss"; /* Esta linea debe quedar al final para que funcione*/
+
+
+@theme {
+    --color-brand: var(--color-primary-300);
+    --color-brand-hover: var(--color-primary-900);
+    --color-brand-soft: var(--color-primary-200);
+    --color-background: var(--color-primary-50);
+    --color-surface: var(--white);
+    --color-surface-muted: var(--color-gray-200);
+    --color-text-primary: var(--color-gray-900); 
+    --color-text-secundary: var(--color-gray-700); 
+    --color-text-muted: var(--color-gray-500); 
+    --color-text-inverse: var(--color-gray-50); 
+    --color-border: var(--color-primary-800); 
+    --color-border-strong: var(--color-primary-950);
+    --color-warning: var(--color-secundary-800); /* */
+}
+
+
