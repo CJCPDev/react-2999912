@@ -1,5 +1,6 @@
 import UserForm from '../features/users/components/UserForm';
 import 'tailwindcss';
+import DeleteCounter from '@/shared/components/DeleteCounter';
 
 
 export default function App(){
@@ -11,6 +12,7 @@ export default function App(){
       <div>
        <UserForm/>
       </div>
+       <DeleteCounter/>
     </div>
   )
 }
