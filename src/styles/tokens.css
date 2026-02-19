@@ -49,6 +49,18 @@
 
     --main-font: 'Piazolla';
     --secundary-font: Roboto;
+    
 
+    /*Font-size*/
+    --fs-xxxxl: 5rem;
+    --fs-xxxl: 4rem;
+    --fs-xxl: 3rem;
+    --fs-xl: 2.5rem;       
+    --fs-lh: 2rem;
+    --fs-md: 1.5rem;
+    --fs-sm: 1.25rem;
+    --fs-xs: 1rem;
+    --fs-xxs: 0.875rem;
+    --fs-xxxs: 0.75rem;
 
 }

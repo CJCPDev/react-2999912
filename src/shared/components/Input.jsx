@@ -9,8 +9,7 @@ export default function Input({label, type = "text", ...props}){
             className="
                     block
                     text-[8px]
-                    mb-1
-                    text-gray-600               
+                    mb-1           
                 "
           >
             {label}
@@ -47,9 +46,9 @@ export default function Input({label, type = "text", ...props}){
                     relative
                     rounded-md
                     border
-                    border-gray-300
+                    border-border
                     px-4
-                    text-base
+                    text-body
                     focus:ring-2
                     focus:ring-blue-500
                     focus:border-blue-500
