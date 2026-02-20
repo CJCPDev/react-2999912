@@ -1,8 +1,18 @@
 import Input from '@/shared/components/Input'
 import Button from '@/shared/components/Button'
+import Select from '@/shared/components/Select';
+import '@/features/users/services/selectService'
+import { useEffect, useState } from 'react';
+import { getDocumentTypes } from '../services/selectService';
 
 
 export default function UserForm(){
+
+    const [documentTypes, setDocumentTypes] = useState([])
+
+    useEffect(() => {
+        getDocumentTypes().then(setDocumentTypes)
+    },[]);
 
 
 
@@ -39,16 +49,20 @@ export default function UserForm(){
                 placeholder='Ingrese su nombre'
                 onChange = {handleNameChange}
                 />
-
-    {/*Cheque una vez se da clic por fuera si lo ingresado corresponde */}
                 <Input
                 label='Email'
-                placeholder='Ingrese su email'
-                onBlur = {handleEmailBlur}
+                placeholder='Ingrese su Email'
+                onChange = {handleEmailBlur}
+                />
+
+    {/*Cheque una vez se da clic por fuera si lo ingresado corresponde */}
+                <Select
+                label='Tipos de documento'
+                options = {documentTypes}
                 />
 
                 {/* Actions */}
-                <div className='flex gap-12 items-center justify-center'>
+                <div className='flex gap-12 items-center justify-center py-10'>
                 <Button
                     variant = 'secondary'
                     size = 'sm'

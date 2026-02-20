@@ -18,6 +18,7 @@
     --color-border: var(--semantic-primary-800); 
     --color-border-strong: var(--semantic-primary-950);
     --color-warning: var(--semantic-secundary-800); /* */
+    --text-caption: var(--semantic-xxxs);
 }
 
 

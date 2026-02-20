@@ -31,6 +31,7 @@
     /*========== STATE ==========*/
 
     --semantic-warning: var(--color-secundary-800); /* */
+    --semantic-xxxs: var(--fs-xxxs);
 
     /*=======================================
 

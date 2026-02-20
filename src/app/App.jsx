@@ -1,6 +1,8 @@
 import UserForm from '../features/users/components/UserForm';
 import 'tailwindcss';
 import DeleteCounter from '@/shared/components/DeleteCounter';
+import DeleteUseEffect from '../shared/components/DeleteUseEffect';
+import Select from '../shared/components/Select';
 
 
 export default function App(){
@@ -13,6 +15,7 @@ export default function App(){
        <UserForm/>
       </div>
        <DeleteCounter/>
+       <DeleteUseEffect/>
     </div>
   )
 }
