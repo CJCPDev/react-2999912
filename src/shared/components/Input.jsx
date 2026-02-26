@@ -1,5 +1,3 @@
-// Creacion de componente input
-
 export default function Input({label, type = "text", ...props}){
     return (
       <div className="w-[320px]">
@@ -9,7 +7,12 @@ export default function Input({label, type = "text", ...props}){
             className="
                     block
                     text-[8px]
-                    mb-1           
+                    
+                    text-gray-500
+                    font-mono     
+                    font-light
+                    font-
+
                 "
           >
             {label}
@@ -44,14 +47,16 @@ export default function Input({label, type = "text", ...props}){
                     w-full
                     h-8
                     relative
-                    rounded-md
+                    text-black
+                    rounded-xl
+                    bg-[#DEFBDD]
                     border
-                    border-border
+                    border-[#F1FDF0]
                     px-4
-                    text-body
+                    text-base
                     focus:ring-2
-                    focus:ring-blue-500
-                    focus:border-blue-500
+                    focus:ring-[#062d08]
+                    focus:border-[#062d08]
                     focus:outline-none   
                     "
             {...props}
@@ -60,4 +65,3 @@ export default function Input({label, type = "text", ...props}){
       </div>
     );
 }
-

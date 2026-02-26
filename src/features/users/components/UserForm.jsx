@@ -8,12 +8,11 @@ import { getDocumentTypes } from '../services/selectService';
 
 export default function UserForm(){
 
-    const [documentTypes, setDocumentTypes] = useState([])
+        const [documentTypes, setDocumentTypes] = useState([])
 
-    useEffect(() => {
-        getDocumentTypes().then(setDocumentTypes)
-    },[]);
-
+        useEffect(() => {
+            getDocumentTypes().then(setDocumentTypes)
+        },[]);
 
 
 /*     const handleNameChange = (e) => {
