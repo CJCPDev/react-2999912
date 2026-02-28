@@ -1,85 +1,86 @@
-import Input from '@/shared/components/Input'
-import Button from '@/shared/components/Button'
-import Select from '@/shared/components/Select';
-import '@/features/users/services/selectService'
-import { useEffect, useState } from 'react';
-import { getDocumentTypes } from '../services/selectService';
-
+import Input from "@/shared/components/Input";
+import Button from "@/shared/components/Button";
+import Select from "@/shared/components/Select";
+// import "../services/selectService";
+import { useEffect, useState } from "react";
+import { getDocumentTypes } from "../services/selectService";
 
 export default function UserForm(){
 
-        const [documentTypes, setDocumentTypes] = useState([])
-
-        useEffect(() => {
-            getDocumentTypes().then(setDocumentTypes)
-        },[]);
-
-
-/*     const handleNameChange = (e) => {
-        console.log('Nombre del usuario:', e.target.value)
-    }; */
-
-
-    const handleEmailBlur = (e) => {
-        console.log('Email del usuario:', e.target.value)
+    const [documentTypes, setDocumentTypes] = useState([])
+    useEffect (() =>{
+        getDocumentTypes().then(setDocumentTypes)
+    }, []);
+    // const hundleNameChange = (e) => {
+    //     console.log("Nombre del usuario: ", e.target.value)
+    // };
+    
+    const hundleEmailBlur = (e) => {
+        console.log("email del usuario: ", e.target.value)
+    };
+    const hundleSubmit = (e) => {
+        console.log("formulario enviado: ", e.target.value)
+    };
+    
+    // una validación básica
+    const hundleNameChange = (e) => {
+        console.log("Nombre del usuario: ", e.target.value)
+        if (e.target.value === ""){
+            console.log(`este campo no puede estar vacio`)
+        }
     };
 
-    /* Una validación basica */
-
-    const handleNameChange = (e) => {
-        console.log('Nombre del usuario:', e.target.value)
-            if(e.target.value === ''){
-                console.log('Este campo no puede estar vacio')
-            }
-    };
-
-    const handleSubmit = (e) => {
-        console.log('enviaste un archivo',e.target.value)
-    }
-
-    return (
-        <div className="justify-items-center"> 
-            {/* Formulario para crear el usuarioo*/}
-
-    {/* Chequea de inmediato si se cumple o no un determinado proceso*/}
-            <form>
+    return(
+        <div>
+            {/* Formulario para crear el usuario */}
+            <form className="
+            px-6 py-12 
+            grid grid-cols-1 gap-6
+            bg-white/50 
+            dark:bg-neutral-800/20
+            backdrop-blur-sm
+            shadow-xl
+            ring-1
+            rounded-xl
+            "
+            >
                 <Input
-                label='Nombre'
-                placeholder='Ingrese su nombre'
-                onChange = {handleNameChange}
-                />
+                    label="nombre"
+                    placeholder="Ingrese su nombre"
+                    onChange={hundleNameChange}
+                >
+                </Input>
                 <Input
-                label='Email'
-                placeholder='Ingrese su Email'
-                onChange = {handleEmailBlur}
-                />
-
-    {/*Cheque una vez se da clic por fuera si lo ingresado corresponde */}
+                    label="email"
+                    placeholder="Ingrese su email"
+                    onBlur={hundleEmailBlur}
+                >
+                </Input>
                 <Select
-                label='Tipos de documento'
-                options = {documentTypes}
-                />
+                    label="tipo de documento"
+                    name = "documentTypes"
+                    opcions = {documentTypes}
+                >
+                </Select>
 
                 {/* Actions */}
-                <div className='flex gap-12 items-center justify-center py-10'>
-                <Button
-                    variant = 'secondary'
-                    size = 'sm'
-                    onClick={()=>
-                        console.log('cancelar')
-                    }>
-                        cancelar
+                <div className= "flex items-center justify-center gap-12">
+                    <Button
+                        variant = "secondary"
+                        size = "sm"
+                        onClick = {() => console.log("Oprimió cancelar")}
+                    >
+                        Cancelar
                     </Button>
-                    
 
-                <Button
-                    variant = 'primary'
-                    size = 'md'
-                    type='submit'
-                    onSubmit={handleSubmit}>
+                    <Button
+                        type="submit"
+                        variant = "primary"
+                        size = "md"
+                        onSubmit={hundleSubmit}
+                    >
                         Guardar
                     </Button>
-
                 </div>
             </form>
         </div>

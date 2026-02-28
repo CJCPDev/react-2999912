@@ -1,7 +1,6 @@
 @import url("./tokens.css");
 @import url("./semantic.css");
 /*@import url("./base.css");*/
-@import "tailwindcss"; /* Esta linea debe quedar al final para que funcione*/
 
 
 @theme {
@@ -22,3 +21,5 @@
 }
 
 
+
+@import "tailwindcss"; /* Esta linea debe quedar al final para que funcione*/
