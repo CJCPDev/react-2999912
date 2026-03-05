@@ -1,5 +1,5 @@
-import authBg from "../../assets/images/auth-background.jpeg"
-import UserForm from "@/features/users/components/UserForm"
+import authBg from "../assets/images/auth-background.jpeg"
+import { UserForm } from "../features/users"
 import { Outlet} from "react-router-dom"
 
 
@@ -17,7 +17,7 @@ export default function AuthLayout (){
                     }
                 }
             >
-                <UserForm/>
+                <UserForm/> 
             </section>
             {/* contenido externo que se inyecta */}
             <main className="mx-auto">

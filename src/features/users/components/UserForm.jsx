@@ -5,6 +5,8 @@ import Select from "@/shared/components/Select";
 import { useEffect, useState } from "react";
 import { getDocumentTypes } from "../services/selectService";
 
+
+
 export default function UserForm(){
 
     const [documentTypes, setDocumentTypes] = useState([])
@@ -59,7 +61,7 @@ export default function UserForm(){
                 <Select
                     label="tipo de documento"
                     name = "documentTypes"
-                    opcions = {documentTypes}
+                    options = {documentTypes}
                 >
                 </Select>
 

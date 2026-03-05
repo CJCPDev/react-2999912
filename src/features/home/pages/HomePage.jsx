@@ -1,5 +1,6 @@
 import heroBg from "@/assets/images/imagen-hero.jpg"
 
+
 export default function HomePage (){
     return(
         <section
