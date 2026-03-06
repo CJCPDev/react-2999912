@@ -4,11 +4,12 @@ import Select from "@/shared/components/Select";
 // import "../services/selectService";
 import { useEffect, useState } from "react";
 import { getDocumentTypes } from "../services/selectService";
-
+import AvatarUploader from "@/shared/components/avatarUploader";
 
 
 export default function UserForm(){
 
+    const [avatarUrl, setAvatarUrl] = useState(null);
     const [documentTypes, setDocumentTypes] = useState([])
     useEffect (() =>{
         getDocumentTypes().then(setDocumentTypes)
@@ -83,6 +84,15 @@ export default function UserForm(){
                     >
                         Guardar
                     </Button>
+                    <div className="w-[320px] text-white">
+
+                    <AvatarUploader onChange={setAvatarUrl} />
+                    {avatarUrl && (
+                    <p className="mt-4 text-sm text-gray-400">
+                    URL guardada en BD: {avatarUrl}
+                    </p>
+                    )}
+                    </div>
                 </div>
             </form>
         </div>
