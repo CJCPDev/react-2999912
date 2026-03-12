@@ -3,6 +3,8 @@ import AuthLayout from "@/layouts/AuthLayout";
 import HomePage from "../../features/home/pages/HomePage";
 import ProfilePage from "../../features/users/pages/ProfilePage";
 import { createBrowserRouter } from "react-router-dom"
+import ConfigUserPage from "../../features/users/pages/ConfigUserPage"
+import ListUserPage from "../../features/users/pages/ListUserPage";
 
 const router = createBrowserRouter ([
     {
@@ -15,11 +17,11 @@ const router = createBrowserRouter ([
                 element: <HomePage/>
             },
             {
-                path: "cursos",
-                element: <h1 className="p-4">Cursos</h1>
+                path: "usuario",
+                element: <ConfigUserPage/>
             },
             {
-                path: "contacto",
+                path: "users/:id/edit",
                 element: <h1 className="p-4">Contacto</h1>
             },
             {
@@ -37,7 +39,7 @@ const router = createBrowserRouter ([
         children: [
             {
                 path: "login",
-                element: <AuthLayout/>
+                element: <ListUserPage/>
             },
             {
                 path: "forgot-password",

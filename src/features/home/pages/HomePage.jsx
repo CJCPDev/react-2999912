@@ -39,7 +39,7 @@ export default function HomePage (){
                         <Card key={product.id} product={product}/>)
                         )} */}
                     {/* Se renderiza una Card */}
-                    { product && <Card product={product}></Card>}
+                    x
 
                 </div>
             </div>

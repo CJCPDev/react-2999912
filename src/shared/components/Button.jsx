@@ -7,7 +7,7 @@ export default function Button ({
 }){
 
     const variants = {
-        primary: 'border border-border  bg-brand text-inverse hover:bg-brand-hover',
+        primary: 'border border-border bg-brand text-inverse hover:bg-brand-hover',
         secondary: 'border border-border-strong bg-brand text-primary hover:bg-brand-soft',
     };
 
