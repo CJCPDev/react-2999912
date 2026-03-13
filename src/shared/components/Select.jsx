@@ -1,7 +1,10 @@
 export default function Select({
     label,
     name,
-    options = []
+    options = [],
+    value,
+    error,
+    OnChange,
     }
 ){
 
@@ -11,11 +14,13 @@ export default function Select({
 
             {/* Label si el label tiene contenido es igual a truthy, si no es falsy y no muestra el label */}
             {label && (
-            <label className='text-caption mb-1 text-text-secundary'>
+            <label className='block text-caption pb-1 text-text-secundary '>
                 {label}
             </label>
             )}
-            <select 
+            <select
+                value={value}
+                OnChange={OnChange}
                 name={name}
                 className='
                     w-full
@@ -37,7 +42,7 @@ export default function Select({
                 })
                 };
             </select>
-
+              {error && <p className="text-red-700 text-sm mt-1">{error}</p>}
 
 
 
